@@ -1,0 +1,62 @@
+# imageFilter 📸🎨
+
+An R package for applying custom image filters using the `magick` package.
+
+## ✨ Features
+
+-   Convert images to grayscale
+-   Apply a magenta/black cutoff filter
+-   Easily extendable to add more custom pixel-level filters
+
+## 📦 Installation
+
+You can install the development version of `ImageFilters` from your local directory using:
+
+```{r}
+# if you haven't yet:
+
+install.packages("devtools")
+
+# then install the package (adjust the path)
+
+devtools::install("path/to/ImageFilters")
+```
+
+##Requirements
+
+```{r}
+install.packages("magick")
+```
+
+##Usage
+
+```{r}
+library(ImageFilters)
+library(magick)
+
+# Read an image
+
+img <- image_read("path/to/your/image.jpg")
+
+# Convert to bitmap
+
+bitmap <- img[[1]]
+
+# Apply grayscale filter
+
+gray_img <- apply_filter(bitmap, greyscale_filter)
+print(gray_img)
+
+# Apply cutoff filter (black or magenta)
+
+cutoff_img <- apply_filter(bitmap, cutoff_filter, cutoff = 128)
+print(cutoff_img)
+```
+
+##How it works
+
+-   apply_filter() function iterates through each pixel of an image’s bitmap and applies a user-defined filter function. Two example filters are included:
+
+    -   greyscale_filter() – converts RGB pixels to grayscale.
+
+    -   cutoff_filter() – assigns black or magenta based on brightness.

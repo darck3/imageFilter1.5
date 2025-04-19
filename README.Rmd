@@ -1,6 +1,6 @@
 # imageFilter 📸🎨
 
-An R package for applying custom image filters using the `magick` package.
+Using the' magick' package, an R package is used to apply custom image filters.
 
 ## ✨ Features
 
@@ -19,7 +19,7 @@ install.packages("devtools")
 
 # then install the package (adjust the path)
 
-devtools::install("path/to/ImageFilters")
+devtools::install("path/to/ImageFilter")
 ```
 
 ##Requirements
@@ -31,7 +31,7 @@ install.packages("magick")
 ##Usage
 
 ```{r}
-library(ImageFilters)
+library(ImageFilter)
 library(magick)
 
 # Read an image

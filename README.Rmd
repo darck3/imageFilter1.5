@@ -17,11 +17,10 @@ You can install the development version of `ImageFilters` from your local direct
 
 install.packages("devtools")
 
-# then, you must download all bits from this depository and set the folder as working directory
-
 # install the package (adjust the path)
 
-devtools::install("path/to/ImageFilter")
+devtools::install_github("https://github.com/darck3/imageFilter1.5/tree/main")
+
 ```
 
 ##Requirements
@@ -33,7 +32,7 @@ install.packages("magick")
 ##Usage
 
 ```{r}
-library(ImageFilter)
+library(imageFilter)
 library(magick)
 
 # Read an image
